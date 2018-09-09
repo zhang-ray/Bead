@@ -1,5 +1,5 @@
 mkdir ../build
 cd ../build
-cmake ../Bead
+cmake ../bead
 make -j3
 
