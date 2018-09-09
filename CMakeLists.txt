@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(Bead)
 
 
-set (CMAKE_CXX_STANDARD 11) # or C++14?
+set (CMAKE_CXX_STANDARD 14) # or C++14?
 
 
 # treat all warnings as errors
