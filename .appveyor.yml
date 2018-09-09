@@ -1,0 +1,13 @@
+image: ubuntu
+
+init:
+- sudo apt -y install libsdl2-dev # for simulator
+
+build_script:
+- ./scripts/ubuntu.build.sh
+
+#test_script:
+#- pwd
+
+#artifacts:
+#- path:
