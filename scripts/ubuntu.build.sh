@@ -1,5 +1,5 @@
 mkdir ../build
 cd ../build
-cmake ../audio-out-accessor
+cmake ../Bead
 make -j3
 
