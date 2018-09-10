@@ -85,6 +85,9 @@ void View::resetAsRoot(){
         }
     };
     ___(this, layout_);
+
+
+    size_ = getSize();
 }
 
 void View::onRenderBackground(Renderer *pCanvas) {

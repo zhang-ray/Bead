@@ -20,6 +20,7 @@ class View {
 public:
     friend class Layout;
     friend class UiGenerator;
+    friend class Simulator;
 
 protected:
     Layout *layout_ = nullptr;
@@ -52,7 +53,7 @@ public:
     virtual void onRenderBackground(Renderer *pCanvas);
     virtual void onTouchUp(const Vector2d &touchPos) {}
     virtual void onTouchDown(const Vector2d &touchPos) {}
-    /************************************************************************/
+
 };
 
 

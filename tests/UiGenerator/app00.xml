@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Application>
+  <View name="viewRoot" size="{400,400}" layout="DockLayout">
+    <View background_color="#341256" subview_info="left,20"/>
+    <View background_color="#123456" subview_info="top,20"/>
+    <View background_color="#561234" subview_info="right,20"/>
+    <View background_color="#345612" subview_info="bottom,20"/>
+    <View background_color="#341256" subview_info="left,20"/>
+    <View background_color="#123456" subview_info="top,20"/>
+    <View background_color="#561234" subview_info="right,20"/>
+    <View background_color="#345612" subview_info="bottom,20"/>
+    <View background_color="#341256" subview_info="left,20"/>
+    <View background_color="#123456" subview_info="top,20"/>
+    <View background_color="#561234" subview_info="right,20"/>
+    <View background_color="#345612" subview_info="bottom,20"/>
+    <View background_color="#341256" subview_info="left,20"/>
+    <View background_color="#123456" subview_info="top,20"/>
+    <View background_color="#561234" subview_info="right,20"/>
+    <View background_color="#345612" subview_info="bottom,20"/>
+  </View>
+</Application>

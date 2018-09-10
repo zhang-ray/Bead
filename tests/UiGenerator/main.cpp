@@ -3,7 +3,7 @@
 
 int main(void){
     Bead::UiGenerator generator;
-    auto viewRoot = generator.parseAndCreate("/tmp/appUI.xml");
+    auto viewRoot = generator.parseAndCreate("/tmp/app00.xml");
     std::cout << viewRoot << std::endl;
 
     return 0;

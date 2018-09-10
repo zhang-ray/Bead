@@ -71,11 +71,9 @@ View * UiGenerator::parseView(const Xml::Xml::Element &element, Layout *parentla
         }
         else if ("subview_info" == attr.key_) {
             subviewInfoText = attr.value_;
-            if (parentlayout == nullptr) {
-                // error
+            if (parentlayout) {
+                parentlayout->add(subviewInfoText, view);
             }
-            parentlayout->add(subviewInfoText, view);
-
         }
         else if (view->setStaticProperty(attr.key_, attr.value_)) {
 
