@@ -45,12 +45,12 @@ public:
     void resetAsRoot();
 
     void composeRecursively(const Vector2d &oldOffset);
-    void renderRecursively(Renderer *pCanvas);
+    void renderRecursively(Renderer *pRenderer);
     void handleTouchRecursively(const Vector2d &touchPos, const TouchDownUp &upDown);
 
-    virtual void onRenderBeforeSubview(Renderer *pCanvas){}
-    virtual void onRenderAfterSubview(Renderer *pCanvas){}
-    virtual void onRenderBackground(Renderer *pCanvas);
+    virtual void onRenderBeforeSubview(Renderer *pRenderer){}
+    virtual void onRenderAfterSubview(Renderer *pRenderer){}
+    virtual void onRenderBackground(Renderer *pRenderer);
     virtual void onTouchUp(const Vector2d &touchPos) {}
     virtual void onTouchDown(const Vector2d &touchPos) {}
 
@@ -70,7 +70,7 @@ protected:
     std::function<void()> clickedAction_;
 
 public:
-    virtual void onRenderAfterSubview(Renderer *pCanvas) override;
+    virtual void onRenderAfterSubview(Renderer *pRenderer) override;
     virtual void onTouchUp(const Vector2d &touchPos) override;
     virtual void onTouchDown(const Vector2d &touchPos) override{
         if (disabled_) return;

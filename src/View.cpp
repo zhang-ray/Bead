@@ -29,21 +29,21 @@ void View::composeRecursively(const Vector2d &oldOffset) {
     }
 }
 
-void View::renderRecursively(Renderer *pCanvas) {
+void View::renderRecursively(Renderer *pRenderer) {
     if (visible_) return;
 
-    pCanvas->move(offset_);
-    onRenderBackground(pCanvas);
-    onRenderBeforeSubview(pCanvas);
+    pRenderer->move(offset_);
+    onRenderBackground(pRenderer);
+    onRenderBeforeSubview(pRenderer);
 
     if (layout_) {
         for (auto c : layout_->subviews_) {
-            c.first->renderRecursively(pCanvas);
+            c.first->renderRecursively(pRenderer);
         }
     }
 
-    pCanvas->move(offset_);
-    onRenderAfterSubview(pCanvas);
+    pRenderer->move(offset_);
+    onRenderAfterSubview(pRenderer);
 }
 
 
@@ -90,9 +90,9 @@ void View::resetAsRoot(){
     size_ = getSize();
 }
 
-void View::onRenderBackground(Renderer *pCanvas) {
+void View::onRenderBackground(Renderer *pRenderer) {
     if (auto pcolor = (Color*)propertyDB_.getProperty("background_color").get()) {
-        pCanvas->fillRectangle(size_, *pcolor);
+        pRenderer->fillRectangle(size_, *pcolor);
     }
 }
 
@@ -197,11 +197,11 @@ void TextView::onTouchUp(const Vector2d &touchPos){
 }
 
 
-void TextView::onRenderAfterSubview(Renderer *pCanvas) {
+void TextView::onRenderAfterSubview(Renderer *pRenderer) {
     if (auto pText = (Text*)propertyDB_.getProperty("text").get()) {
         if (auto pFontColor = (Color*)propertyDB_.getProperty("font_color").get()) {
             if (auto pFontSize = (Scalar*)propertyDB_.getProperty("font_size").get()) {
-                pCanvas->drawText(pText->get()
+                pRenderer->drawText(pText->get()
                                   , Rectangle(0, (double)size_[1], 0, (double)size_[0])
                         , *pFontColor
                         , false
