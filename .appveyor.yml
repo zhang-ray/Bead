@@ -6,8 +6,9 @@ init:
 build_script:
 - ./scripts/ubuntu.build.sh
 
-#test_script:
-#- pwd
+test_script:
+- pwd
+- ./scripts/run.tests.sh
 
 #artifacts:
 #- path:
