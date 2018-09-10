@@ -12,28 +12,35 @@ int main(void){
     View * viewRoot = generator.parseAndCreate("/tmp/app00.xml");
     viewRoot->composeRecursively({0,0});
 
-    {
-        SdlRenderer sdlRenderer(viewRoot->getSize());
+    SdlRenderer sdlRenderer(viewRoot->getSize());
 
-        {
-            bool done = false;
+    bool done = false;
 
-            for (;;){
-                sdlRenderer.startRendering();
-                sdlRenderer.clear(Color(0x6e828b,0));
-                viewRoot->renderRecursively(&sdlRenderer);
-                sdlRenderer.stopRendering();
-                SDL_Event event;
-                while (SDL_PollEvent(&event)) {
-                    if (event.type == SDL_QUIT) {
-                        done = true;
-                    }
-                }
-                if (done){
-                    break;
-                }
+    for (;;){
+        SDL_Event event;
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_QUIT) {
+                done = true;
+            }
+            else if (event.type == SDL_MOUSEBUTTONUP){
+                viewRoot->handleTouchRecursively(
+                {(double)(event.button.x), (double)(event.button.y)}
+                            , TouchDownUp::UP
+                            );
+            }if (event.type == SDL_MOUSEBUTTONDOWN){
+                viewRoot->handleTouchRecursively(
+                {(double)(event.button.x), (double)(event.button.y)}
+                            , TouchDownUp::DOWN
+                            );
             }
         }
+        if (done){
+            break;
+        }
+
+        sdlRenderer.startRendering();
+        viewRoot->renderRecursively(&sdlRenderer);
+        sdlRenderer.stopRendering();
     }
 
     return 0;

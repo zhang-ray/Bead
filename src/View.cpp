@@ -64,7 +64,7 @@ void View::handleTouchRecursively(const Vector2d &touchPos, const TouchDownUp &u
         }
     }
 
-    if (subviewHandleMouseEvent_){
+    if (subviewHandleTouchEvent_){
         if (layout_) {
             for (auto c : layout_->subviews_) {
                 c.first->handleTouchRecursively(touchPos, upDown);

@@ -29,7 +29,7 @@ protected:
     View *root_ = nullptr;
     PropertyDatabase propertyDB_;
     bool visible_ = false;
-    bool subviewHandleMouseEvent_ = true;
+    bool subviewHandleTouchEvent_ = true;
     static size_t s_maxId;
     size_t globalID_ = ++s_maxId;
 public:

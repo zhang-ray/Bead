@@ -18,5 +18,7 @@
     <View background_color="#123456" subview_info="top,20"/>
     <View background_color="#561234" subview_info="right,20"/>
     <View background_color="#345612" subview_info="bottom,20"/>
+    <TextView text="Not bad!" font_color="#594288" font_size="32" subview_info="top, 40"/>
+    <TextView text="Bead!" font_color="#594288" font_size="32" subview_info="fill"/>
   </View>
 </Application>
