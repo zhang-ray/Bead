@@ -9,7 +9,7 @@ int main(void){
 
     using namespace Bead;
     UiGenerator generator;
-    View * viewRoot = generator.parseAndCreate("/tmp/appUI.xml");
+    View * viewRoot = generator.parseAndCreate("/tmp/app00.xml");
     viewRoot->composeRecursively({0,0});
 
     {
