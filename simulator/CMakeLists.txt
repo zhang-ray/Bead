@@ -9,4 +9,4 @@ file(GLOB_RECURSE FILES_SOURCES *.cpp)
 file(GLOB_RECURSE FILES_INCLUDE *.hpp)
 
 add_executable(Simulator ${FILES_INCLUDE} ${FILES_SOURCES})
-target_link_libraries(Simulator Bead SDL2 SDL2_ttf)
+target_link_libraries(Simulator Bead)

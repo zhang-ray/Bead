@@ -192,8 +192,6 @@ void TextView::setEnable(bool enable) {
 void TextView::onTouchUp(const Vector2d &touchPos){
     if (disabled_) return;
     if (clickedAction_) clickedAction_();
-
-    propertyDB_.approachToUsage("Hover");
 }
 
 
