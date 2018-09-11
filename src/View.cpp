@@ -108,7 +108,7 @@ size_t View::s_maxId = 10000;
 
 
 View::View(){
-    propertyDB_.registerProperty({"name", Text::parse });
+    propertyDB_.registerProperty({"id", Text::parse });
     propertyDB_.registerProperty({"background_color", Color::parse });
     propertyDB_.registerProperty({"inner_margin", Rectangle::parse });
     propertyDB_.registerProperty({"border_color", Color::parse });
@@ -117,7 +117,7 @@ View::View(){
 }
 
 View * View::findViewById(const std::string &queryId){
-    if (auto pId = (Text*)propertyDB_.getProperty("name").get()) {
+    if (auto pId = (Text*)propertyDB_.getProperty("id").get()) {
         if (pId->text == queryId) {
             return this;
         }
