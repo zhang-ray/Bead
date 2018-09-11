@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Application>
-  <View id="viewRoot" size="{400,400}" background_color="#123456" layout="DockLayout" inner_margin="{10,10,10,10}">
-    <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
-      <TextView text="0" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="." font_color="#ffffff" font_size="25" subview_info="left,60"/>
-    </View>
-    <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
-      <TextView text="1" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="2" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="3" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="=" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-    </View>
-    <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
-      <TextView text="4" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="5" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="6" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-    </View>
-    <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
-      <TextView text="7" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="8" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="9" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="+" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-    </View>
-    <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
-      <TextView text=" " font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="/" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="*" font_color="#ffffff" font_size="25" subview_info="left,60"/>
-      <TextView text="-" font_color="#ffffff" font_size="25" subview_info="left,60"/>
+  <View size="{250,300}" background_color="#efefef" layout="DockLayout" >
+    <TextView id="lcd"  background_color="#3f3f3f" font_color="#f3fefe" font_size="40" subview_info="top,80" inner_margin="{10,10,30,30}"/>
+    <View id="viewRoot" layout="DockLayout" inner_margin="{10,10,30,30}" subview_info="fill">
+      <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
+        <TextView id="0"   text="0" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="00"  text="00" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView text="." font_color="#111111" font_size="25" subview_info="left,60"/>
+      </View>
+      <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
+        <TextView id="1"  text="1" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="2"  text="2" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="3" text="3" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView text="=" font_color="#111111" font_size="25" subview_info="left,60"/>
+      </View>
+      <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
+        <TextView id="4" text="4" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="5" text="5" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="6" text="6" font_color="#111111" font_size="25" subview_info="left,60"/>
+      </View>
+      <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
+        <TextView id="7" text="7" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="8" text="8" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="9" text="9" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView id="0" text="+" font_color="#111111" font_size="25" subview_info="left,60"/>
+      </View>
+      <View id="bottomRow" subview_info="bottom,40" layout="DockLayout">
+        <TextView text="C" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView text="/" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView text="*" font_color="#111111" font_size="25" subview_info="left,60"/>
+        <TextView text="-" font_color="#111111" font_size="25" subview_info="left,60"/>
+      </View>
     </View>
   </View>
 </Application>

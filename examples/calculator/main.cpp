@@ -15,6 +15,17 @@ int main(void){
     }
     viewRoot->composeRecursively({0,0});
 
+    {
+        auto lcd = (TextView *)(viewRoot->findViewById("lcd"));
+        // add action
+        for (int i = 0; i < 10; i++){
+            auto button = (TextView *)(viewRoot->findViewById(std::to_string(i)));
+            button->setAction([=](){
+                lcd->appendText(std::to_string(i));
+            });
+        }
+    }
+
     SdlRenderer sdlRenderer(viewRoot->getSize());
 
     bool done = false;

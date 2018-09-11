@@ -175,6 +175,19 @@ void TextView::setAction(std::function<void()> action){
     }
 }
 
+void TextView::setText(const std::string &newText){
+    propertyDB_.setConstProperty("text", newText);
+}
+
+void TextView::appendText(const std::string &newText){
+    if (auto pText = (Text*)propertyDB_.getProperty("text").get()) {
+        propertyDB_.setConstProperty("text", pText->text+ newText);
+    }
+    else {
+        setText(newText);
+    }
+}
+
 void TextView::setEnable(bool enable) {
     disabled_ = !enable;
     std::string usage;

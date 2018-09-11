@@ -62,12 +62,14 @@ public:
     TextView();
     virtual ~TextView() { }
     virtual void setAction(std::function<void()> action);
+    void setText(const std::string &newText);
+    void appendText(const std::string &newText);
     void setEnable(bool enable);
 
 protected:
     bool disabled_ = false;
     Color grphicColor_;
-    std::function<void()> clickedAction_;
+    std::function<void()> clickedAction_ = nullptr;
 
 public:
     virtual void onRenderAfterSubview(Renderer *pRenderer) override;
