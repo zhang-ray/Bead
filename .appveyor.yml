@@ -1,7 +1,6 @@
 image: ubuntu
 
-init:
-- sudo apt --quiet -y install libsdl2-dev # for simulator
+#init:
 
 build_script:
 - ./scripts/ubuntu.build.sh
