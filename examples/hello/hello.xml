@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Application>
+  <View id="viewRoot" size="{400,400}" layout="DockLayout">
+    <TextView text="Cool Bead!" font_color="#123456" font_size="52" subview_info="top, 80"/>
+  </View>
+</Application>
